@@ -1,12 +1,11 @@
 import { ArrowRight, Download, Github, Linkedin, Mail, MapPin, Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
+import { resumeFile, resumeFileName } from "../constants/resume";
 import { Profile } from "../types/portfolio";
 
 interface HeroSectionProps {
   profile: Profile;
 }
-
-const resumeFile = "/resume/Tirthankar_Roy_FlowCV_Resume_2026-05-06.pdf";
 
 export const HeroSection = ({ profile }: HeroSectionProps) => (
   <section className="relative">
@@ -27,7 +26,7 @@ export const HeroSection = ({ profile }: HeroSectionProps) => (
           <Link to="/projects" className="primary-action">
             View Projects <ArrowRight size={18} />
           </Link>
-          <a href={resumeFile} download="Tirthankar_Roy_Full_Stack_Developer_Resume.pdf" className="secondary-action">
+          <a href={resumeFile} download={resumeFileName} className="secondary-action">
             Download Resume <Download size={18} />
           </a>
           <Link to="/experience" className="secondary-action">

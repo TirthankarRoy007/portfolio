@@ -1,7 +1,6 @@
 import { ArrowRight, Database, Download, GitBranch, ServerCog, Workflow } from "lucide-react";
 import { Link } from "react-router-dom";
-
-const resumeFile = "/resume/Tirthankar_Roy_FlowCV_Resume_2026-05-06.pdf";
+import { resumeFile, resumeFileName } from "../constants/resume";
 
 export const AboutSection = () => (
   <section className="section-shell">
@@ -72,7 +71,7 @@ export const AboutSection = () => (
             <Link to="/projects" className="primary-action">
               See Project Work <ArrowRight size={16} />
             </Link>
-            <a href={resumeFile} download="Tirthankar_Roy_Full_Stack_Developer_Resume.pdf" className="secondary-action">
+            <a href={resumeFile} download={resumeFileName} className="secondary-action">
               Download Resume <Download size={16} />
             </a>
             <Link to="/contact" className="secondary-action">
